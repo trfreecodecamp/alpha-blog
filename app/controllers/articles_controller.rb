@@ -45,4 +45,11 @@ class ArticlesController < ApplicationController
             render 'edit'
         end
     end
+
+    def destroy 
+        #This has to be linked to something in the view index.html.erb
+        @article = Article.find(params[:id])
+        @article.destroy
+        redirect_to articles_path
+    end
 end
