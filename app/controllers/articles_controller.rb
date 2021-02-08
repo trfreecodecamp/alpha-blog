@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
         #save to the db
         # Need to whitelist by using Strong parameters
         @article = Article.new(article_params)
- 
+        @article.user = User.first
         #redirect_to article_path(@article)
         if @article.save
             flash[:notice] = "Article was created successfully."
