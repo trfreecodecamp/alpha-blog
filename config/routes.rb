@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # The "root" url.  <controller>#action
+  # In this case the pages controller must have a home action.
   root "pages#home"
   get 'about', to: 'pages#about'
 
