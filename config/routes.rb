@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   #Create the routes I need for 'articles'
   #resources provides REST-ful routes to Rails resources
   resources :articles       #, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
