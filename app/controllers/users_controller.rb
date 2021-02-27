@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create 
+    byebug
     @user = User.new(user_params)
     if @user.save 
       flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed in."
